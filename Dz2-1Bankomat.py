@@ -18,6 +18,7 @@ def calculate_wealth_tax(balance,amount):
 def main():
     balance = 0
     transaction_count = 0
+    file = []
 
     while True:
         print("Доступные действия: пополнить-1, снять-2, выйти-3")
@@ -37,6 +38,8 @@ def main():
             balance += deposit
             wealth_tax = calculate_wealth_tax(balance,deposit)
             balance -= wealth_tax
+            file.append(deposit)
+            file.append(balance)
 
         elif action == "2":
             transaction_count += 1
@@ -57,13 +60,17 @@ def main():
             wealth_tax = calculate_wealth_tax(balance,withdrawal)
             balance -= wealth_tax
             print("комиссии за снятие: ", withdrawal_fee)
+            file.append(deposit)
+            file.append(balance)
 
         elif action == "3":
             wealth_tax = calculate_wealth_tax(balance,balance)
             balance -= wealth_tax
             print("Ваш баланс: ", balance)
             break
-
+                
         print("Ваш баланс: ", balance)
+        print (file)
+        
 
 main()
