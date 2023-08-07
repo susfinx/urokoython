@@ -1,3 +1,5 @@
+__all__ = ['sort_files_by_type']
+
 import os
 import shutil
 
