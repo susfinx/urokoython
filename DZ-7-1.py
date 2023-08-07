@@ -1,3 +1,5 @@
+__all__ = ['bulk_rename_files']
+
 import os
 
 def bulk_rename_files(directory, desired_name, num_digits, source_ext, target_ext, name_range=None):
@@ -11,11 +13,11 @@ def bulk_rename_files(directory, desired_name, num_digits, source_ext, target_ex
                 os.rename(original_path, new_path)
                 print(f"Переименовано: {filename} -> {new_name}")
 
-source_directory = urok-2/urok7-1
-desired_name = 'new_name'
-num_digits = 4  # Количество цифр в порядковом номере
-source_ext = '.txt'  # Расширение исходных файлов
-target_ext = 'txt'  # Расширение конечных файлов
-name_range = [3, 6]  # Диапазон символов для взятия из исходного имени
+source_directory = 'путь_к_папке'
+desired_name = 'новое_имя'
+num_digits = 4
+source_ext = '.txt'
+target_ext = 'txt'
+name_range = [3, 6]
 
 bulk_rename_files(source_directory, desired_name, num_digits, source_ext, target_ext, name_range)
