@@ -1,1 +1,1 @@
-__all__=['gad_chislo',]
+__all__=['gad_chislo','ferz']
