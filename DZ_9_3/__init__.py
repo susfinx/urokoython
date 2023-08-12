@@ -1,1 +1,1 @@
-DZ9
+__all__=['gad_chislo',]
